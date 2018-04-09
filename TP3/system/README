@@ -1,0 +1,31 @@
+Algorithms for Speech and NLP TD 3: Pirashanth RATNAMOGAN
+
+Ce dossier contient un dossier system qui continent toutes les fonctions qui permettent de lancer notre applications de normalisations des tweets.
+Le code a été fait en python 2.7.
+
+Afin de lancer le code les libraires suivantes sont nécessaires: 
+re
+string
+numpy
+sys
+sklearn
+chainer
+context2vec
+
+On suppose donc que la librairie context2vec est installée.
+On suppose que la variable $CONTEXT2VECDIR contient par avance le chemin vers le modèle *.param  à utiliser comme modèle context2vec préentrainé. Peut être que cela n'est pas exactement ce qui est demandé dans ce cas on peut indiqué le chemin du .param en modifiant de manière adéquat la ligne CONTEXT2VECDIR commentée dans le fichier run_system.sh.
+
+Pour lancer l'outil il faut utiliser le script shell
+run_system.sh 
+
+Celui-ci prend en premier argument obligatoire le fichier qui contient le corpus contenant les différents tweets (un par ligne).
+Le second argument optionnel est le chemin vers le dossier contenant les pretrained word vectors de Glove.
+
+Exemple de lancement dans le terminal: 
+./run_system.sh /home/ratnamogan/Documents/Speech_and_NLP/MVA_2018_SL/TD_#3/corpus_to_test.txt /home/ratnamogan/Documents/Speech_and_NLP/MVA_2018_SL/TD_#3/glove.twitter.27B
+
+ou sans Glove 
+./run_system.sh /home/ratnamogan/Documents/Speech_and_NLP/MVA_2018_SL/TD_#3/corpus_to_test.txt
+
+Par défaut le résultat sera dans le fichier normalized_tweets.txt du repertoire à partir duquel a été lancé le script.
+

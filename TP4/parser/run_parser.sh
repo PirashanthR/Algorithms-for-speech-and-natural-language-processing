@@ -1,0 +1,20 @@
+#!/bin/sh
+
+#assume context to vec dir in $CONTEXT2VECDIR
+
+FILE_TRAINING=$1
+FILE_TESTING=$2
+
+USE_SPELL_CORRECTION=$3
+PATH_JAVA=$4
+PATH_JAR=$5
+PATH_MODEL=$6
+
+#ligne a lancer
+python ./system/run_parser.py $FILE_TRAINING $FILE_TESTING $USE_SPELL_CORRECTION $PATH_JAVA $PATH_JAR $PATH_MODEL
+
+
+
+
+
+
